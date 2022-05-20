@@ -1,0 +1,39 @@
+<svg width="374" height="374" viewBox="0 0 374 374" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="373" height="373" stroke="url(#paint0_angular_423_931)"/>
+<rect x="24.5" y="23.5" width="326" height="326" stroke="url(#paint1_angular_423_931)"/>
+<rect x="47.5" y="47.5" width="279" height="279" stroke="url(#paint2_angular_423_931)"/>
+<rect x="71.5" y="70.5" width="232" height="232" stroke="url(#paint3_angular_423_931)"/>
+<rect x="94.5" y="94.5" width="186" height="186" stroke="url(#paint4_angular_423_931)"/>
+<rect x="117.5" y="116.5" width="140" height="140" stroke="url(#paint5_angular_423_931)"/>
+<rect x="140.5" y="140.5" width="93" height="93" stroke="url(#paint6_angular_423_931)"/>
+<defs>
+<radialGradient id="paint0_angular_423_931" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(187 187) rotate(45) scale(264.458)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0.1"/>
+</radialGradient>
+<radialGradient id="paint1_angular_423_931" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(187.5 186.5) rotate(45) scale(231.224)">
+<stop offset="0.998008" stop-color="white"/>
+<stop offset="0.99828" stop-color="white" stop-opacity="0.1"/>
+</radialGradient>
+<radialGradient id="paint2_angular_423_931" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(187 187) rotate(45) scale(197.99)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0.1"/>
+</radialGradient>
+<radialGradient id="paint3_angular_423_931" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(187.5 186.5) rotate(45) scale(164.756)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0.1"/>
+</radialGradient>
+<radialGradient id="paint4_angular_423_931" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(187.5 187.5) rotate(45) scale(132.229)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0.1"/>
+</radialGradient>
+<radialGradient id="paint5_angular_423_931" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(187.5 186.5) rotate(45) scale(99.7021)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0.1"/>
+</radialGradient>
+<radialGradient id="paint6_angular_423_931" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(187 187) rotate(45) scale(66.468)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0.1"/>
+</radialGradient>
+</defs>
+</svg>
