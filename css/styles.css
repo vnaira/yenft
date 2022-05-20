@@ -182,7 +182,9 @@ header .colorlib-navbar-brand {
     background: #202020;
 }
 .arr{background: url("../images/union.png");width: 58px;height: 58px}
-.pl-arrow{background: url("../images/union.png")no-repeat; padding-left: 75px; margin-left: 21px; margin-top: 17px}
+.pl-arrow{background: url("../images/union.png")no-repeat; padding-left: 70px;
+    margin-left: 14px;
+    margin-top: 17px;}
 .hero-wrap .slider-text .desc h1 {
     font-size: 6vw;
     font-weight: 700;
@@ -191,10 +193,10 @@ header .colorlib-navbar-brand {
 }
 .pt-100{padding-top: 88px}
 .transaction-block{
-    margin-left: 86px;
-    margin-top: 5px;
+    margin-left: 74px;
+    margin-top: 10px;
 }
-.infin{margin-left: -10px;
+.infin{margin-left: -22px;
     margin-top: 10px;}
 .hero-wrap .slider-text .desc h3 {
     color: rgba(255, 255, 255, 0.8);
@@ -261,7 +263,7 @@ background-repeat: repeat-y; padding-top: 120px}
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transform: rotate(-90deg);
 }
-
+.mt-btn{margin-top: 17px}
 .red-button {
     display: flex;
     flex-direction: row;
@@ -448,7 +450,7 @@ background-repeat: repeat-y; padding-top: 120px}
     padding-top: 120px;
 }
 .pb-double{padding-bottom: 173px}
-.pl-8{padding-left: 83px}
+.pl-8{padding-left: 71px}
 .pt-double{padding-top: 91px}
 .footer {
     background: #fff;
@@ -623,7 +625,7 @@ background-repeat: repeat-y; padding-top: 120px}
 
 #owl-carousel-partners .owl-stage-outer {
 
-    padding-top: 7px;
+    /*padding-top: 7px;*/
 }
 
 #owl-carousel-partners .owl-item {
@@ -650,6 +652,7 @@ background-repeat: repeat-y; padding-top: 120px}
     background: url(../images/partner-grid.png) no-repeat;
     min-height: 560px;
     background-size: 100%;
+    padding-top: 5px;
 }
 
 .mt-partners{margin-top: 105px}
@@ -716,7 +719,9 @@ background-repeat: repeat-y; padding-top: 120px}
 
 .rectangles {
     position: relative;
-    top:40px
+    top:40px;
+display: block;
+
 }
 
 .rec-item {
@@ -813,7 +818,7 @@ background-repeat: repeat-y; padding-top: 120px}
         /*max-width: 1300px;*/
     }
     #owl-carousel-team .owl-stage{left:-1403px!important;}
-
+    .rectangles{display: block}
 }
 @media (max-width: 768px) {
     #colorlib-main-nav ul {
