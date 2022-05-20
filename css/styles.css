@@ -35,6 +35,8 @@
     --color-red-transparent: rgba(235, 73, 68,  .8);
     --color-pink: #F5A4A2;
     --color-blue: #4767ED;
+    --color-grey-bg:#F9F9F9;
+    --color-dark-bg:#232323;
     --top: 70px;
     --topH: 50px;
 }
@@ -201,7 +203,8 @@ header .colorlib-navbar-brand {
 .logo {
     margin-left: 20px
 }
-
+.grid-bg{background-image: url("../images/bgrows.png");
+background-repeat: repeat-y; padding-top: 120px}
 .hamburger {
     margin-right: 30px;
     float: right
@@ -377,7 +380,7 @@ header .colorlib-navbar-brand {
     font-family: Heebo;
     font-size: 20px;
     line-height: 24px;
-    color: #232323
+    color: var(--color-dark-bg);
 }
 
 .muted {
@@ -399,14 +402,14 @@ header .colorlib-navbar-brand {
     font-size: 20px;
     line-height: 24px;
     font-family: Heebo;
-    color: #232323;
+    color: var(--color-dark-bg);
     text-transform: uppercase;
 }
 
 .half p {
     font-size: 16px;
     line-height: 20px;
-    color: #232323;
+    color: var(--color-dark-bg);
     font-family: "Heebo Light";
     margin-top: 24px;
 }
@@ -416,7 +419,7 @@ header .colorlib-navbar-brand {
     /*padding: 30px;*/
     width: 50%;
     float: left;
-    outline: 1px solid #232323;
+    outline: 1px solid var(--color-dark-bg);
     min-height: 225px;
     background: var(--color-blue);
     position: relative;
@@ -442,7 +445,7 @@ header .colorlib-navbar-brand {
 }
 
 .pt-8 {
-    padding-top: 93px
+    padding-top: 120px;
 }
 .pb-double{padding-bottom: 173px}
 .pl-8{padding-left: 83px}
@@ -520,6 +523,19 @@ header .colorlib-navbar-brand {
 .team-img {
     width: 72px !important;}
 .item:hover .img-wrapper{
+    /*background-image:*/
+    /*        radial-gradient(circle at 0% 100%, transparent -3px, #000000 -3px, #000000 1px, transparent 1px),*/
+    /*        linear-gradient(to right, #000000, #eb4944),*/
+    /*        radial-gradient(circle at 100% 100%, transparent -3px, #eb4944 -3px, #eb4944 1px, transparent 1px),*/
+    /*        linear-gradient(to bottom, #eb4944, #000000),*/
+    /*        radial-gradient(circle at 0% 0%, transparent -3px, #000000 -3px, #000000 1px, transparent 1px),*/
+    /*        linear-gradient(to left, #000000, #eb4944),*/
+    /*        radial-gradient(circle at 100% 0%, transparent -3px, #eb4944 -3px, #eb4944 1px, transparent 1px),*/
+    /*        linear-gradient(to top, #eb4944, #000000);*/
+    /*background-size: 1px 1px, calc(100% - 2px) 4px, 1px 1px, 4px calc(100% - 2px);*/
+    /*background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;*/
+    /*background-repeat: no-repeat;*/
+
     background-image:
             radial-gradient(circle at 0% 100%, transparent -4px, #000000 -4px, #000000 4px, transparent -4px),
             linear-gradient(to right, #000000, var(--color-red-transparent)),
@@ -547,7 +563,10 @@ header .colorlib-navbar-brand {
 .social-links a {
     display: inline-block !important;
 }
-
+.twitter{background: url("../images/carousel/twitter.png") no-repeat; width: 16px; height: 13px}
+.in{background: url("../images/carousel/in.png") no-repeat;width: 16px; height: 15px; margin-right: 16px}
+.twitter:hover{background: url("../images/carousel/twitter-hover.png")}
+.in:hover{background: url("../images/carousel/in-hover.png")}
 .social-links a img {
     width: 15px !important;
 }
@@ -583,20 +602,20 @@ header .colorlib-navbar-brand {
 .owl-carousel-team .owl-next, #owl-carousel-advisors .owl-next, #owl-carousel-partners .owl-next {
     position: absolute;
     top: -100px;
-    right: 0;
+    right: -5px;
 }
 
 .owl-carousel-team .owl-prev, #owl-carousel-advisors .owl-prev, #owl-carousel-partners .owl-prev {
     position: absolute;
     top: -100px;
-    right: 50px;
+    right: 45px;
 }
 #owl-carousel-partners .owl-prev{
     position: absolute;top: -160px;
-    right: 50px;}
+    right: 55px;}
 #owl-carousel-partners .owl-next{
     position: absolute;top: -160px;
-    right:0;}
+    right:5px;}
 .owl-carousel .owl-nav.disabled{display: block}
 .carousel-title {
     width: 250px;
@@ -613,15 +632,15 @@ header .colorlib-navbar-brand {
 }
 
 #owl-carousel-partners .item:hover {
-    -webkit-box-shadow: -7px 6px 0px 0 #232323;
-    box-shadow: -7px 6px 0px 0 #232323;
-    background: #f6f6f6 !important;
+    -webkit-box-shadow: -7px 6px 0px 0 var(--color-dark-bg);
+    box-shadow: -7px 6px 0px 0 var(--color-dark-bg);
+    background: var(--color-grey-bg) !important;
     bottom: 6px;
     left: 7px;
     position: relative;
 }
 /*#owl-carousel-partners .owl-carousel .owl-stage{padding-top: 7px}*/
-#owl-carousel-partners .item{border-right: 1px solid  #232323;}
+#owl-carousel-partners .item{border-right: 1px solid  var(--color-dark-bg);}
 .partner-item {
     height: 186px;
 
@@ -633,7 +652,7 @@ header .colorlib-navbar-brand {
     background-size: 100%;
 }
 
-.mt-partners{margin-top: 100px}
+.mt-partners{margin-top: 105px}
 .grid-2 {
     background-image: url("../images/block_bg.png");
     background-repeat: no-repeat;
@@ -707,9 +726,10 @@ header .colorlib-navbar-brand {
     height: 193px;
     -webkit-transition: top 1.5s;
     transition: top 1.5s;
-    right: 110px;
+    right: 98px;
 }
-
+.it{margin-left: 10px}
+#owl-carousel-advisors, #owl-carousel-team{width: 100%; padding-left: 0; padding-right: 0}
 .top-1 {
     top: calc(var(--top));
 }
@@ -788,13 +808,14 @@ header .colorlib-navbar-brand {
     width: 20px;
     justify-self: center;
 }
-@media (max-width: 1100px) {
+@media (min-width: 1400px) {
     .max-width-size {
         /*max-width: 1300px;*/
     }
+    #owl-carousel-team .owl-stage{left:-1403px!important;}
 
 }
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     #colorlib-main-nav ul {
         padding: 20px 0 0 0;
     }
@@ -805,6 +826,11 @@ header .colorlib-navbar-brand {
         margin: 5px auto;
         display: block;}
     .next-step{height: 745px}
+    .grid-bg{background-image: none;padding-top: 0}
+    .subtitle{margin-top: 10px}
+    .rectangles{display: none}
+    .q-item {
+        box-shadow: -1px 0 0 -1px var(--color-pink);}
 }
 @media (max-width: 640px) {
     .next-step{height: 745px; background-size: 94%}
@@ -816,4 +842,9 @@ header .colorlib-navbar-brand {
         width: 100%;
         max-width: 300px;
     }
+    .grid-bg{background-image: none;padding-top: 0}
+    .subtitle{margin-top: 10px}
+    .rectangles{display: none}
+    .q-item {
+        box-shadow: -1px 0 0 -1px var(--color-pink);}
 }
