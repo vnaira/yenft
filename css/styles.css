@@ -182,9 +182,10 @@ header .colorlib-navbar-brand {
     background: #202020;
 }
 .arr{background: url("../images/union.png");width: 58px;height: 58px}
-.pl-arrow{background: url("../images/union.png")no-repeat; padding-left: 70px;
-    margin-left: 14px;
-    margin-top: 17px;}
+.pl-arrow{background: url("../images/union.png")no-repeat;
+    padding-left: 75px;
+    margin-left: 21px;
+    margin-top: 0px;}
 .hero-wrap .slider-text .desc h1 {
     font-size: 6vw;
     font-weight: 700;
@@ -196,8 +197,7 @@ header .colorlib-navbar-brand {
     margin-left: 74px;
     margin-top: 10px;
 }
-.infin{margin-left: -22px;
-    margin-top: 10px;}
+
 .hero-wrap .slider-text .desc h3 {
     color: rgba(255, 255, 255, 0.8);
     font-size: 18px;
@@ -322,7 +322,7 @@ background-repeat: repeat-y; padding-top: 120px}
 .title1 {
     font-size: 48px;
     line-height: 60px;
-    background: conic-gradient(from 135deg at 50% 50%, #FFFFFF 0deg, rgba(255, 255, 255, 0.1) 360deg);
+    background: conic-gradient(from 135deg at 50% 50%, #FFFFFF 0deg, rgba(34, 34, 34, 0.1) 360deg);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -449,9 +449,9 @@ background-repeat: repeat-y; padding-top: 120px}
 .pt-8 {
     padding-top: 120px;
 }
-.pb-double{padding-bottom: 173px}
+.pb-double{padding-bottom: 136px}
 .pl-8{padding-left: 71px}
-.pt-double{padding-top: 91px}
+.pt-double{padding-top: 112px}
 .footer {
     background: #fff;
     padding-top: 6em;
@@ -721,7 +721,7 @@ background-repeat: repeat-y; padding-top: 120px}
     position: relative;
     top:40px;
 display: block;
-
+transition: all 40s linear;
 }
 
 .rec-item {
@@ -734,7 +734,7 @@ display: block;
     right: 98px;
 }
 .it{margin-left: 10px}
-#owl-carousel-advisors, #owl-carousel-team{width: 100%; padding-left: 0; padding-right: 0}
+#owl-carousel-advisors, .owl-carousel-team{width: 100%; padding-left: 0; padding-right: 0}
 .top-1 {
     top: calc(var(--top));
 }
@@ -755,23 +755,23 @@ display: block;
     top: calc(var(--top) * 5);
 }
 
-.rectangles:hover .top-1 {
+.parallel .top-1 {
     top: calc(var(--topH));
 }
 
-.rectangles:hover .top-2 {
+.parallel .top-2 {
     top: calc(var(--topH) * 2);
 }
 
-.rectangles:hover .top-3 {
+.parallel .top-3 {
     top: calc(var(--topH) * 3);
 }
 
-.rectangles:hover .top-4 {
+.parallel .top-4 {
     top: calc(var(--topH) * 4);
 }
 
-.rectangles:hover .top-5 {
+.parallel .top-5 {
     top: calc(var(--topH) * 5);
 }
 #big-menu{height: 80vh;
@@ -813,12 +813,82 @@ display: block;
     width: 20px;
     justify-self: center;
 }
+
+
+stop {
+    -webkit-transition: .4s ease;
+    transition: .4s ease;
+}
+
+/* Use the colors to transition to */
+#rect{display: inline-block; width: 374px; margin-left: 95px; margin-top: 0px}
+.gradient-anim{
+    /*fill:  conic-gradient(from 135deg at 50% 50%, #FFFFFF 0deg, rgba(34, 34, 34, 0.1) 360deg);*/
+    transform-origin: 50px 50px;
+    animation: bgRotate 5s infinite linear;
+    transition:all 3s;
+    background:conic-gradient(from 36deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 360deg)
+}
+.infin{width: 372px; height: 376px;
+background: url("../images/union-it.png") repeat;
+margin-left: -22px;
+     margin-top: 20px;}
+@keyframes bgRotate {
+    /*from {background:conic-gradient(from 0deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 20deg) ;}*/
+    /*to {background:conic-gradient(from 360deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 360deg) ;}*/
+    0% {background:conic-gradient(from 0deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 20deg) ;}
+    5% {background:conic-gradient(from 10deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 20deg) ;}
+    10% {background:conic-gradient(from 20deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 20deg) ;}
+    15%{ background:conic-gradient(from 40deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 40deg) ;}
+    20%{ background:conic-gradient(from 60deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 60deg) ;}
+    25%{ background:conic-gradient(from 80deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 80deg) ;}
+    30%{ background:conic-gradient(from 100deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 100deg) ;}
+    35%{ background:conic-gradient(from 120deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 120deg) ;}
+    40%{ background:conic-gradient(from 140deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 140deg) ;}
+    45%{ background:conic-gradient(from 160deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 160deg) ;}
+    50%{ background:conic-gradient(from 180deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 160deg) ;}
+    55%{ background:conic-gradient(from 200deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 180deg) ;}
+    60%{ background:conic-gradient(from 220deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 200deg) ;}
+    65%{ background:conic-gradient(from 240deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 220deg) ;}
+    70%{ background:conic-gradient(from 260deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 240deg) ;}
+    75%{ background:conic-gradient(from 280deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 260deg) ;}
+    80%{ background:conic-gradient(from 300deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 280deg) ;}
+    85%{ background:conic-gradient(from 320deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 300deg) ;}
+    90%{ background:conic-gradient(from 330deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 320deg) ;}
+    95%{ background:conic-gradient(from 340deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 340deg) ;}
+    100%{background:conic-gradient(from 360deg at 50% 50%, rgba(34, 34, 34, 0.5) 0deg, rgba(34, 34, 34, 0.1) 380deg) ;}
+}
+
+@keyframes pathStroke {
+    0% {  stroke-dashoffset: -288.5; }
+    40%, 70% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: 288.5; }
+}
+
+@keyframes pathRotate {
+    0% {  transform: rotate(0deg); }
+    50% { transform: rotate(-540deg); }
+    100% { transform: rotate(-1080deg); }
+}
+.gradient-anim stop:last-child {
+    stop-color: conic-gradient(from 135deg at 50% 50%, #FFFFFF 0deg, rgba(34, 34, 34, 0.1) 360deg);
+}
+
+
 @media (min-width: 1400px) {
     .max-width-size {
         /*max-width: 1300px;*/
     }
-    #owl-carousel-team .owl-stage{left:-1403px!important;}
+    /*.owl-carousel-team .owl-stage{left:-1403px!important;}*/
     .rectangles{display: block}
+}
+@media (min-width: 769px) and (max-width: 1000px) {
+    .grid-bg {
+        background-image: url(../images/bgrows-medium.png);
+        background-repeat: repeat-y;}
+    .max-width-size {
+        max-width:760px;
+    }
 }
 @media (max-width: 768px) {
     #colorlib-main-nav ul {
@@ -842,8 +912,34 @@ display: block;
     #owl-carousel-partners .owl-prev, #owl-carousel-partners .owl-next{top:-103px;}
     #colorlib-main-nav{width: 80%; }
     #big-menu{padding: 77px 30px 0 0!important;}
+    .grid-bg {
+        background-image: url(../images/bgrows-small.png);
+        background-repeat: repeat-y;}
+    .max-width-size {
+        max-width:382px;
+    }
+    .half{width: 100%}
+    #partners-block {
+        background: url(../images/partner-grid.png) repeat-y;
+        min-height: 383px;
+        background-size: 100%;
+        padding-top: 5px;
+    }
 }
 @media (max-width: 640px) {
+    .grid-bg {
+        background-image: url(../images/bgrows-small.png);
+        background-repeat: repeat-y;}
+    .max-width-size {
+        max-width:382px;
+    }
+    .half{width: 100%}
+    #partners-block {
+        background: url(../images/partner-grid.png) repeat-y;
+        min-height: 383px;
+        background-size: 100%;
+        padding-top: 5px;
+    }
     #colorlib-main-nav{width: 80%;}
     #big-menu{padding: 77px 30px 0 0!important;}
     .next-step{height: 745px; background-size: 94%}
@@ -855,7 +951,7 @@ display: block;
         width: 100%;
         max-width: 300px;
     }
-    .grid-bg{background-image: none;}
+
     .subtitle{margin-top: 10px}
     .rectangles{display: none}
     .q-item {
@@ -866,4 +962,7 @@ display: block;
     #owl-carousel-partners .owl-prev, #owl-carousel-partners .owl-next{top:-103px;}
     .footer{padding-top: 1em;}
     .footer .subtitle{margin-top: 40px}
+    #rect,#rect svg{width: 320px!important; height: 320px}
+    #rect{margin: 0 auto}
+    .t-center{text-align: center}
 }
