@@ -1202,8 +1202,11 @@ stop {
         height: 80px;}
     .w-left-60 {
         width: 60%;}
+    .carousel-title {
+        width: 60%;
+    }
 }
-@media (min-width: 769px) and (max-width: 1000px) {
+@media (min-width: 768px) and (max-width: 1000px) {
     .w-left-50 {
         width: 50%;
         float: left;
@@ -1240,7 +1243,7 @@ stop {
     .red-border{height: 44px}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .red-border{height: 44px}
     .w-left-50 {
         width: 100%;
@@ -1306,11 +1309,11 @@ stop {
         padding: 77px 30px 0 0 !important;
     }
     .grid-bg {
-        background-image: url(../images/bgrows-small.png);
+        background-image: url(../images/bgrows-600.png);
         background-repeat: repeat-y;
     }
     .max-width-size {
-        max-width: 382px;
+        max-width: 600px;
     }
     .half {
         width: 100%
@@ -1337,6 +1340,9 @@ stop {
         -ms-flex-order: 2;
         order: 2;
     }
+    #market{background: url("../images/grid-600.png") repeat; min-height: 1650px}
+    #key-features{margin-top: 90px!important;}
+    .infin{margin: 5px auto}
 }
 
 @media (max-width: 640px) {
