@@ -63,7 +63,7 @@
             </div>
         </div>
         <!--        block 1-->
-        <div id="about" class="m-auto middle-content max-width-size col-xs-12 p-80">
+        <section id="about" class="m-auto middle-content max-width-size col-xs-12 p-80">
             <div class="row">
                 <div class="col-md-10 col-lg-7 col-sm-12 col-xs-11 col-xs-10">
                     <div class="row top-left-1">
@@ -100,10 +100,10 @@
                 </div>
             </div>
 
-        </div>
+        </section>
         <!--section 2-->
 
-        <div class="p-0 max-width-size m-auto next-step col-12" id="market">
+        <section class="p-0 max-width-size m-auto next-step col-12" id="market">
             <div class="pt-double">
                 <div class="row">
                     <div class="w-left-50 content-2">
@@ -139,11 +139,11 @@
                 </div>
 
             </div>
-        </div>
+        </section>
     </div>
 
     <div class="row dark">
-        <div class=" m-auto max-width-size grid-bg" id="key-features">
+        <section class=" m-auto max-width-size grid-bg" id="key-features">
             <div class="row align-items-start">
                 <div class="col-lg-6 col-sm-12 col-xs-12">
                     <div class="row">
@@ -167,7 +167,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <div class=" m-auto max-width-size grid-bg p-0" id="halfs">
             <div class="row">
                 <div class="half-wrapper">
@@ -239,7 +239,7 @@
         </div>
 
         <!--       Team slider -->
-        <div class=" m-auto max-width-size pb-4 dark pt-8 grid-bg" id="team">
+        <section class=" m-auto max-width-size pb-4 dark pt-8 grid-bg" id="team">
             <div class="row">
                 <div class="col-8"><h1 class="title1 text-capitalize carousel-title">Our Team</h1></div>
                 <div class="col-4"></div>
@@ -409,10 +409,10 @@
                 </div>
             </div>
 
-        </div>
+        </section>
 
         <!--        Advisors slider-->
-        <div class=" m-auto max-width-size pb-60 dark pt-8 grid-bg" id="advisors">
+        <section class=" m-auto max-width-size pb-60 dark pt-8 grid-bg" id="advisors">
             <div class="row">
                 <div class="col-8"><h1 class="title1 text-capitalize carousel-title">Advisors</h1></div>
                 <div class="col-4"></div>
@@ -506,14 +506,14 @@
                 </div>
 
             </div>
-        </div>
+        </section>
 
     </div>
 
 
     <div class="row grid-2">
         <!--        Partners slider-->
-        <div class="col-lg-11 col-md-11 col-xs-12 m-auto " id="partners">
+        <section class="col-lg-11 col-md-11 col-xs-12 m-auto " id="partners">
             <div class="max-width-size m-auto">
                 <div id="partners-block">
                     <div class="row">
@@ -563,13 +563,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
     </div>
 
 
     <div class="row dark">
-        <div class=" m-auto max-width-size grid-bg" id="road-map">
+        <section class=" m-auto max-width-size grid-bg" id="road-map">
             <div class="row">
                 <div class="col-lg-6 col-md-6 d-md-block d-sm-none">
                     <div class="row height-100">
@@ -617,7 +617,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
     </div>
 
@@ -723,20 +723,34 @@
             }
         });
 
-        var btns = $(".nav__content .nav__list .nav-link_");
-        console.log(btns);
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click",
-                function () {
-                    var current = document
-                        .getElementsByClassName("active");
 
-                    current[0].className = current[0]
-                        .className.replace(" active", "");
-
-                    this.className += " active";
-                });
+        // add menu item active onclick and onscroll
+        let section = document.querySelectorAll('section');
+        let lists = document.querySelectorAll('.nav .nav__content .nav__list .nav-link_');
+        function activeLink(li) {
+            lists.forEach((item) => item.classList.remove('active'));
+            li.classList.add('active');
         }
+        lists.forEach((item) =>
+            item.addEventListener('click', function(){
+                activeLink(this);
+            }));
+
+        window.onscroll = () => {
+            section.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+                if (top >= offset && top < offset + height) {
+                    const target = document.querySelector(`[href='#${id}']`);
+                    activeLink(target);
+                }
+            })
+        };
+
+
+
     });
 
 

@@ -837,10 +837,9 @@ a .subtitle{
 
 .rectangle_:hover {
     width: 540px;
-    padding-top: 50px;
-    height: 440px;
+    height: 490px;
     background: url(../images/layers_scrolled.svg) no-repeat;
-    background-position: top center;
+    background-position: center;
 }
 #road-map{padding-bottom: 170px}
 .rec-item {
