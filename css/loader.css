@@ -1,0 +1,37 @@
+#preloader{
+    width: 100vw; height: 100vh; background: #000; position: fixed; z-index: 1000000;
+}
+.abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%); /* IE 9 */
+    -webkit-transform: translate(-50%,-50%); /* Safari */
+    -moz-transform: translate(-50%,-50%); /* Firefox Older versions*/
+    -o-transform: translate(-50%,-50%); /* Opera */
+    transform: translate(-50%,-50%);
+}
+/* box fall preloader */
+.sq-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+}
+
+.sq-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none transparent;
+    overflow: hidden;
+}
+
+.sq-fill {
+    background: none #FD4401;
+    width: 100%;
+    height: 100%;
+}
