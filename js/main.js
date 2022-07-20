@@ -11,10 +11,10 @@
 				navText: ['<div class="button-inner"><span class="angle-left" aria-hidden="true"></span></div>', '<div class="button-inner"><span class="angle-right" aria-hidden="true"></span></div>'],
 				responsive: {
 					0: {
-						items: 2
+						items: 1
 					},
 					600: {
-						items: 2
+						items: 1
 					},
 					768: {
 						items: 4
@@ -28,26 +28,26 @@
 				}
 			}
 		);
-		$("#owl-carousel-partners").owlCarousel(
-			{
-				loop: true,
-				margin: 0,
-				nav: true,
-				dots: false,
-				navText: ['<div class="button-inner"><span class="angle-left" aria-hidden="true"></span></div>', '<div class="button-inner"><span class="angle-right" aria-hidden="true"></span></div>'],
-				responsive: {
-					0: {
-						items: 2
-					},
-					600: {
-						items: 2
-					},
-					1000: {
-						items: 6
-					}
-				}
-			}
-		);
+		// $("#owl-carousel-partners").owlCarousel(
+		// 	{
+		// 		loop: true,
+		// 		margin: 0,
+		// 		nav: true,
+		// 		dots: false,
+		// 		navText: ['<div class="button-inner"><span class="angle-left" aria-hidden="true"></span></div>', '<div class="button-inner"><span class="angle-right" aria-hidden="true"></span></div>'],
+		// 		responsive: {
+		// 			0: {
+		// 				items: 2
+		// 			},
+		// 			600: {
+		// 				items: 2
+		// 			},
+		// 			1000: {
+		// 				items: 6
+		// 			}
+		// 		}
+		// 	}
+		// );
 	});
 
 	$(document).ready(function () {

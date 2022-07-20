@@ -44,7 +44,21 @@
 }
 
 body {
-    font-family: Heebo, serif;
+    font-family: Heebo-regulyar, serif;
+}
+
+/*loader style*/
+#loading {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0.7;
+    background-color: #fff;
+    z-index: 99;
 }
 
 .main {
@@ -352,7 +366,7 @@ margin-top: 10px;
     border-radius: 0;
     position: relative;
     border: 0 none;
-    left: 33px;
+    left: 24px;
     margin-top: 10px;
     text-decoration: none;
 }
@@ -640,9 +654,16 @@ a .subtitle{
 }
 
 .partner-logo {
-    width: 138px !important;
+    width: 138px
 }
 
+.partner-it{width: 186px;
+    height: 186px;
+    display: inline-block;
+    margin-right: -3px;
+    background: #000;
+    margin-bottom: 1px;
+}
 .social-links a {
     display: inline-block !important;
 }
@@ -673,18 +694,16 @@ a .subtitle{
     display: inline-block;
     background: url("../images/carousel/left.svg");
     width: 16px;
-    height: 12px;
+    height: 14px;
     margin-top: 14px;
 }
-
 .angle-right {
     display: inline-block;
     background: url("../images/carousel/right.svg");
     width: 16px;
-    height: 12px;
+    height: 14px;
     margin-top: 14px;
 }
-
 .owl-nav button {
     border-radius: 0 !important;
     background: var(--color-pink)!important;
@@ -710,7 +729,7 @@ a .subtitle{
     top: -100px;
     right: 0px;
 }
-
+.owl-theme .owl-nav [class*=owl-]{margin-right: 0}
 .owl-carousel-team .owl-prev, #owl-carousel-advisors .owl-prev {
     position: absolute;
     top: -100px;
@@ -750,7 +769,14 @@ a .subtitle{
 
 .partner-item {
     height: 186px;
+    background: #fff;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    transition: all linear .3s;
 }
+.partner-item:hover{left: 5px;
+    bottom: 5px}
 #partners-block {
     background: url(../images/partner-grid.png) no-repeat;
     min-height: 560px;
@@ -912,12 +938,14 @@ a .subtitle{
 #big-menu li a {
     text-decoration: none;
     color:#fff;
+    opacity: .8;
 }
 #big-menu li a.active, #big-menu li a:hover {
     text-decoration: none;
     color:#fff;
     padding-right: 10px;
     border-right: 1px solid var(--color-red);
+    opacity: 1;
 }
 
 .menu-icon {
@@ -933,20 +961,20 @@ a .subtitle{
     transition: all ease-in-out .3s;
 }
 
-.menu-icon:hover span:nth-child(1) {
-    justify-self: start;
-    transition: all ease-in-out .3s;
-}
-body.nav-active .menu-icon:hover span:nth-child(1){
-    justify-self: auto;
-}
-body.nav-active .menu-icon:hover span:nth-child(2){
-    justify-self: auto;
-}
-.menu-icon:hover span:nth-child(2) {
-    justify-self: end;
-    transition: all ease-in-out .3s;
-}
+/*.menu-icon:hover span:nth-child(1) {*/
+/*    justify-self: start;*/
+/*    transition: all ease-in-out .3s;*/
+/*}*/
+/*body.nav-active .menu-icon:hover span:nth-child(1){*/
+/*    justify-self: auto;*/
+/*}*/
+/*body.nav-active .menu-icon:hover span:nth-child(2){*/
+/*    justify-self: auto;*/
+/*}*/
+/*.menu-icon:hover span:nth-child(2) {*/
+/*    justify-self: end;*/
+/*    transition: all ease-in-out .3s;*/
+/*}*/
 body.nav-active .menu-icon:hover
 .menu-icon.active span:nth-child(2) {
     transform: translateX(10px);
@@ -1022,7 +1050,7 @@ stop {
 .overflow-h{overflow: hidden}
 #market{height: 652px}
 .big-z{z-index: 9000}
-
+#key-features{padding-bottom: 32px}
 
 
 .grid {
@@ -1221,7 +1249,85 @@ stop {
     }
 }
 
+.m-aut .wrap .cube:nth-of-type(2) {
+    transform: rotateX(-20deg) rotateY(-45deg) rotate(0deg) translateZ(-70px);
+}
+.m-aut .wrap .cube:nth-of-type(3) {
+    left: auto;
+    right: 31px;
+    transform: rotateX(-20deg) rotateY(-45deg) rotate(0deg) translateZ(0px);
+}
+.m-aut .wrap .cube:nth-of-type(4) {
+    left: auto;
+    margin-bottom: -1px;
+    right: 35px;
+    transform: rotateX(-20deg) rotateY(-45deg) rotate(0deg) translateZ(65px);
+}
+.m-aut .wrap .cube:after {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    left: 0;
+    top: -70px;
+    box-shadow: inherit;
+    transform-origin: 50% 100%;
+    transform: rotateX(90deg);
+    background: #000;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.m-aut .wrap .cube:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -100%;
+    box-shadow: inherit;
+    transform: rotateY(90deg);
+    transform-origin: 0% 50%;
+    background: #000;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.m-aut .wrap .column {
+    position: absolute;
+    bottom: -60px;
+    height: 400px;
+    width: 140px;
+    left: 0;
+    box-shadow: inset 0 0 0 1px #fff;
+    transform: rotateX(-20deg) rotateY(-45deg) rotate(0deg);
+    transform-origin: 0% 50%;
+    z-index: -1;
+    background: linear-gradient(to right, transparent 69px, #fff 69px, #fff 71px, transparent 71px), repeating-linear-gradient(to bottom, #fff, #fff 1px, #000 2px, #000 70px);
+}
+.m-aut .wrap .column:after {
+    content: "";
+    position: absolute;
+    height: 140px;
+    width: 140px;
+    left: 0;
+    top: -140px;
+    transform-origin: 50% 100%;
+    transform: rotateX(90deg);
+    box-shadow: inherit;
+    background: linear-gradient(to right, transparent 69px, #fff 69px, #fff 71px, transparent 71px), repeating-linear-gradient(to bottom, #fff, #fff 1px, #000 2px, #000 70px);
+}
+.m-aut .wrap .column:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -100%;
+    box-shadow: inherit;
+    transform: rotateY(90deg);
+    transform-origin: 0% 50%;
+    background: inherit;
+}
 
+
+/*media queries*/
 
 @media (min-width: 1400px) {
     .recs {
@@ -1230,6 +1336,7 @@ stop {
 }
 
 @media (min-width: 1001px) and (max-width: 1200px) {
+    .m-aut .wrap{left: 22%!important;}
     .max-width-size {
         max-width: 900px;
     }
@@ -1262,6 +1369,7 @@ stop {
     }
 }
 @media (min-width: 768px) and (max-width: 1000px) {
+    .m-aut .wrap{left: 15%}
     #owl-carousel-partners .owl-prev {
         /*display: none;*/
         position: absolute;
@@ -1322,6 +1430,7 @@ stop {
 }
 
 @media (max-width: 767px) {
+    .m-aut .wrap{left: 12%}
     .grid {
         width: 320px;
         height: 300px;}
@@ -1329,14 +1438,11 @@ stop {
         display: none
     }
     #owl-carousel-partners .owl-prev {
-        /*display: none;*/
         position: absolute;
         top: -160px;
         right: 55px;
     }
-
     #owl-carousel-partners .owl-next {
-        /*display: none;*/
         position: absolute;
         top: -160px;
         right: 5px;
@@ -1346,69 +1452,55 @@ stop {
         width: 100%;
         float: left
     }
-
     .w-left-60 {
         width: 100%;
         float: left
     }
-
     .w-left-40 {
         width: 100%;
         float: left
     }
-
     #colorlib-main-nav ul {
         padding: 20px 0 0 0;
     }
-
     .max-width-size {
         max-width: 100%;
     }
-
     .transaction-block {
         margin: 5px auto;
         display: block;
     }
-
     .next-step {
         height: 745px
     }
-
     .grid-bg {
         background-image: none;
     }
-
     .subtitle {
         margin-top: 10px
     }
-
     .rectangles {
         display: none
     }
-
     .q-item {
         box-shadow: none
     }
-
     .mt-partners {
         margin-top: 30px;
     }
-
     #owl-carousel-partners .owl-prev, #owl-carousel-partners .owl-next {
         top: -87px;
         position: absolute;
         right: 55px;
     }
-
     #colorlib-main-nav {
         width: 80%;
     }
-
     #big-menu {
         padding: 77px 30px 0 0 !important;
     }
     .grid-bg {
-        background-image: url(../images/bgrows-600.png);
+        background-image: none;
         background-repeat: repeat-y;
     }
     .max-width-size {
@@ -1445,11 +1537,42 @@ stop {
 }
 
 @media (max-width: 640px) {
-    .active_header{background: #000
+    .img-wrapper {
+        width: 90%
+    }
+    .team-img {
+        width: 100% !important;
+    }
+    .half:hover .inner {
+        left: 0;
+        bottom: 0;
+        padding: 30px;
+    }
+    .partner-item:hover {
+        left: 0;
+        bottom: 0;
+    }
+    .red-button:hover .button-container, .transparent-button:hover .button-container {
+        top: 0;
+        left: 0;
+    }
+    .partner-it {
+        width: 150px;
+        height: 150px;
+    }
+    .partner-logo {
+        width: 120px
+    }
+    .active_header {
+        background: #000
+    }
+    .partner-item {
+        height: 150px
     }
     .grid {
         width: 320px;
-        height: 300px;}
+        height: 300px;
+    }
     .recs {
         display: none
     }
@@ -1495,15 +1618,20 @@ stop {
         background-size: 94%
     }
     .pl-arrow {
-        margin-top: 80px;
-        padding-left: 45px;
-        background-size: 8%;
+        padding-top: 60px;
+        padding-left: 0;
+        background-size: 10%;
         text-align: left;
+        background-position: 0px 0px;
     }
+    .button-container {
+        width: 100%;}
     .half {
         width: 100%;
-        min-height: 280px
+        min-height: 280px;
+        margin-bottom: 20px;
     }
+    .pt-8{padding-top: 20px}
     .half-a{text-decoration: none; display: inline-block; height: 280px}
     .half .inner {
         height: 100%
@@ -1527,7 +1655,7 @@ stop {
     .mt-partners {
         margin-top: 30px;
     }
-
+.owl-nav{display: none}
     #owl-carousel-partners .owl-prev {
         position: absolute;
         top: -87px;
@@ -1570,7 +1698,14 @@ stop {
     .infin {
         width: 300px;
         height: 300px; margin: 5px auto}
-    .red-button{margin-bottom: 30px}
+    .red-button{margin-bottom: 30px; width: 90%}
+    .transparent-button {
+        width: 90%;
+        left: 0;
+    }
+    #market{min-height: 700px;}
+    .p-80{padding-bottom: 0}
+    .transparent-button .button-container {width: 100%}
     .content-1 {
         -moz-box-ordinal-group: 1;
         -webkit-box-ordinal-group: 1;
@@ -1586,3 +1721,131 @@ stop {
         order: 2;
     }
 }
+
+.m-aut {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+.m-aut * {
+    transform-style: preserve-3d;
+}
+.m-aut .wrap {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    left: 25%;
+    -webkit-animation: slide 2s linear infinite;
+    animation: slide 2s linear infinite;
+    margin-top: 5px;
+}
+@-webkit-keyframes slide {
+    to {
+        transform: translateY(65px);
+    }
+}
+@keyframes slide {
+    to {
+        transform: translateY(65px);
+    }
+}
+body .wrap:nth-of-type(2) {
+    margin-top: 0px;
+}
+body .wrap .cube {
+    position: absolute;
+    bottom: calc(100vh + 120px);
+    left: 0;
+    width: 70px;
+    height: 70px;
+    box-shadow: inset 0 0 0 1px #fff, inset 0 0 0 50px #000;
+    transform: rotateX(-20deg) rotateY(-45deg) rotate(0deg);
+    transform-origin: 0% 50%;
+    background: #000;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 2;
+}
+body .wrap .cube:nth-of-type(1) {
+    -webkit-animation: falling1 2s ease-in infinite;
+    animation: falling1 2s ease-in infinite;
+}
+@-webkit-keyframes falling1 {
+    50% {
+        bottom: 320px;
+    }
+    100% {
+        bottom: 320px;
+    }
+}
+@keyframes falling1 {
+    50% {
+        bottom: 320px;
+    }
+    100% {
+        bottom: 320px;
+    }
+}
+body .wrap .cube:nth-of-type(2) {
+    -webkit-animation: falling2 2s ease-in infinite;
+    animation: falling2 2s ease-in infinite;
+}
+@-webkit-keyframes falling2 {
+    40% {
+        bottom: 320px;
+    }
+    100% {
+        bottom: 320px;
+    }
+}
+@keyframes falling2 {
+    40% {
+        bottom: 320px;
+    }
+    100% {
+        bottom: 320px;
+    }
+}
+body .wrap .cube:nth-of-type(3) {
+    -webkit-animation: falling3 2s ease-in infinite;
+    animation: falling3 2s ease-in infinite;
+}
+@-webkit-keyframes falling3 {
+    30% {
+        bottom: 320px;
+    }
+    100% {
+        bottom: 320px;
+    }
+}
+@keyframes falling3 {
+    30% {
+        bottom: 320px;
+    }
+    100% {
+        bottom: 320px;
+    }
+}
+body .wrap .cube:nth-of-type(4) {
+    -webkit-animation: falling4 2s ease-in infinite;
+    animation: falling4 2s ease-in infinite;
+}
+@-webkit-keyframes falling4 {
+    20% {
+        bottom: 320px;
+    }
+    100% {
+        bottom: 320px;
+    }
+}
+@keyframes falling4 {
+    20% {
+        bottom: 320px;
+    }
+    100% {
+        bottom: 320px;
+    }
+}
+
+
+
