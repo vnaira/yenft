@@ -1,14 +1,5 @@
 @import url(menu.css);
 
-.main, body {
-    background: var(--color-black)
-}
-
-#colorlib-main-nav, #loading, header {
-    position: fixed;
-    top: 0
-}
-
 .half p, .mt-24, .mtop-18 {
     margin-top: 24px
 }
@@ -46,7 +37,11 @@
     --topH: 50px
 }
 
-body {
+html > body{background:var(--color-black)!important;
+}
+.overflow-hidden-y{overflow-y: hidden}
+.main, body {
+    background: var(--color-black);
     font-family: Heebo-regulyar, serif
 }
 
@@ -183,7 +178,7 @@ body {
 }
 
 header {
-    padding: 26px 0;
+    padding:22px 0 18px;
     left: 0;
     right: 0;
     z-index: 9;
@@ -235,7 +230,7 @@ header .colorlib-navbar-brand {
 }
 
 .logo {
-    margin-left: 20px
+    margin-left: 40px
 }
 
 .grid-bg {
@@ -387,7 +382,7 @@ header .colorlib-navbar-brand {
 }
 
 .top-left-1 {
-    height: 720px;
+    /*height: 720px;*/
     display: flex;
     justify-content: center;
     justify-items: center
@@ -825,7 +820,10 @@ a .subtitle {
     list-style-type: none;
     font-size: 16px;
     line-height: 24px;
-    color: #fff
+    color: #fff;
+    background: url("../images/white-squre.svg") no-repeat;
+    padding-left: 18px;
+    background-position: 0px 8px;
 }
 
 .q-item {
@@ -843,16 +841,11 @@ a .subtitle {
     color: var(--color-red)
 }
 
-.q-blocks li::before {
-    content: "◼ ";
-    color: #fff;
-    font-size: 14px;
-    margin-right: 5px
-}
-
-.q-item.active .q-blocks li::before {
-    content: "◼ ";
-    color: var(--color-red)
+.q-item.active .q-blocks li {
+    list-style-type: none;
+    background: url("../images/red-squre.svg") no-repeat;
+    padding-left: 18px;
+    background-position: 0px 8px;
 }
 
 .p-80 {
@@ -1157,6 +1150,14 @@ stop {
     animation: float 6s ease-in-out infinite;
 }
 
+.red-block-1{
+    background: url("../images/red-bg-1.png") no-repeat;
+    background-position: 100%;
+}
+.for-web{    height: 90vh;
+    display: flex;
+    align-items: center;}
+
 
 /**
 mobile view
@@ -1211,7 +1212,7 @@ mobile view
 }
 
 @media (min-width: 768px) and (max-width: 1000px) {
-
+body{overflow-x: hidden}
     #owl-carousel-partners .owl-prev {
         position: absolute;
         top: -160px;
@@ -1310,6 +1311,7 @@ mobile view
 }
 
 @media (max-width: 767px) {
+    body{overflow-x: hidden; background: var(--color-black)}
     .grid-bg, .main {
         background-image: none
     }
@@ -1424,15 +1426,21 @@ background-size: cover}
     .infin {
         margin: 5px auto
     }
-    .logo{margin-left: 6px}
+    .logo{margin-left: 30px}
+    .for-web {
+        height: auto;
+        padding-top: 80px;}
 }
 
 @media (max-width: 640px) {
+    body{background: var(--color-black)}
     #road-map{padding-bottom: 30px}
-    .nav-but-wrap{right: -15px}
-    .top-left-1{padding: 32px;height: 60vh; border-bottom: 1px solid rgb(255 255 255 / 20%)}
+    .nav-but-wrap{right: -20px}
+    .top-left-1{padding: 40px 32px;
+        /*height: 60vh; */
+        border-bottom: 1px solid rgb(255 255 255 / 20%)}
     .partner-it, .partner-item {
-        height: 150px
+        height: 145px
     }
 
     .dark, .main {
@@ -1450,7 +1458,7 @@ background-size: cover}
     .half:hover .inner {
         left: 0;
         bottom: 0;
-        padding: 30px
+        padding: 24px
     }
 
     .partner-item:hover {
@@ -1465,7 +1473,7 @@ background-size: cover}
 #partners{padding-bottom: 25px;
     border-bottom: 1px solid rgb(255 255 255 / 20%);}
     .partner-it {
-        width: 165px
+        width: 145px
     }
 
     .partner-logo {
@@ -1473,7 +1481,8 @@ background-size: cover}
     }
 
     .active_header {
-        background: #000
+        background: #000;
+        height: 60px;
     }
 
     .grid {
@@ -1678,5 +1687,13 @@ background-size: cover}
         -webkit-order: 2;
         -ms-flex-order: 2;
         order: 2
+    }
+}
+@media (max-width: 380px){
+    .partner-it {
+        width: 135px;
+    }
+    .grid {
+        width: 311px;
     }
 }

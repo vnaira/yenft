@@ -80,9 +80,14 @@
 		window.onscroll = () => {
 			section.forEach(sec => {
 				let top = window.scrollY;
-				let offset = sec.offsetTop;
+				let offset = sec.offsetTop - 20;
 				let height = sec.offsetHeight;
 				let id = sec.getAttribute('id');
+				console.log(top + " top")
+				console.log(offset + " offset")
+				console.log(height + " height")
+				console.log(height + offset)
+
 				if (top >= offset && top < offset + height) {
 					const target = document.querySelector(`[href='#${id}']`);
 					activeLink(target);
