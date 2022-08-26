@@ -1697,3 +1697,5 @@ background-size: cover}
         width: 311px;
     }
 }
+
+.nav__list li::marker{display: none!important;color:transparent;content: ''}
